@@ -18,3 +18,5 @@ var beer5 = new Product("Legally Blonde", "Cider", "Rose", "Crisp and refreshing
 var beer6 = new Product("Danish Pie", "Pilsner", "Light", "Bitter qualities, with notes of lemongrass.", "Try this if you went one time to a band camp", "50 DKK.", "330 ml."); 
 
 console.log(Product);
+
+//Hello
