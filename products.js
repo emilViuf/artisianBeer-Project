@@ -20,3 +20,4 @@ var beer6 = new Product("Danish Pie", "Pilsner", "Light", "Bitter qualities, wit
 console.log(Product);
 
 //Hello
+//How are you
