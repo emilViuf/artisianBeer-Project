@@ -20,3 +20,5 @@ var beer6 = new Product("Danish Pie", "Pilsner", "Light", "Bitter qualities, wit
 console.log(Product);
 
 //Hello
+
+// Hello again from taty
