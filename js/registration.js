@@ -7,8 +7,11 @@ const lastNameUI = document.getElementById("lastName")
 const dobUI = document.getElementById("dob")
 const genderUI = document.getElementById ("gender")
 const emailUI = document.getElementById ("email")
-const phoneUI = document.getElementById ("phoneNumber")
-const addressUI = documenr.getElementById ("address")
+const phoneUI = document.getElementById ("phone")
+const streetUI = document.getElementById ("street")
+const numberUI = document.getElementById ("houseNumber")
+const zipUI = document.getElementById ("zip")
+const cityUI = document.getElementById ("city")
 const usernameUI = document.getElementById("username")
 const passwordUI = document.getElementById ("password")
 const checkboxUI = document.getElementById ("checkbox")
@@ -24,24 +27,49 @@ submitUI.onclick = function () {
  if(firstNameUI.value.length == 0 || lastNameUI.value.length == 0 
     || dobUI.value.length == 0 || genderUI.value.length == 0 
     || emailUI.value.length == 0 || phoneUI.value.length == 0
-    || addressUI.value.length == 0 || usernameUI.value.length == 0 
-    || passwordUI.value.length == 0 || !checkboxUI.checked) {
+    || streetUI.value.length == 0 || numberUI.value.lengh == 0
+    || zipUI.value.lengh == 0 || cityUI.value.lengh == 0
+    || usernameUI.value.length == 0 || passwordUI.value.length == 0 
+    || !checkboxUI.checked) {
 
-        console.log("please input details")
+        alert("please input details")
         return false
         // means please stop do not do anything
         // we are checking of one of them is empty
 
     } 
-// We need to implement type of evaluatoion of the provider data
+
+// We need to implement type of evaluation of the provided data
 // For the names only characters + space + dash
+
+// 1. Evaluate if phone number fits criteria of 8 digits
+
+if (phoneUI.value.lengh !== 8) {
+    alert ("Phone number requires 8 digits")
+    return false
+}
+
+// 2. Evaluate if Zip Code is within Cph
+
+if (zipUI.value < 1000 || zipUI.value > 3000) {
+    alert ("We only deliver within Copenhagen area")
+    return false
+}
+
+// 3. Evaluate if email 
+
+// Add additional checks 
+
 
     console.log ("User registered")
 
     users.push(new User(firstNameUI.value, lastNameUI.value, dobUI.value, 
-    genderUI.value, emailUI.value, phoneUI.value, addressUI.value, usernameUI.value, 
-    passwordUI.value))
+    genderUI.value, emailUI.value, phoneUI.value, streetUI.value, numberUI.value, 
+    zipUI.value, cityUI.value, usernameUI.value, passwordUI.value))
+
+// save the user to local storage
+// redirect the user to the login page
+
 
 }
 
-// 
