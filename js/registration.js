@@ -42,24 +42,35 @@ submitUI.onclick = function () {
 // We need to implement type of evaluation of the provided data
 // For the names only characters + space + dash
 
-// 1. Evaluate if phone number fits criteria of 8 digits
+// 1. Evaluate if email 
 
-if (phoneUI.value.lengh !== 8) {
+function validateEmail(email) {
+    var emailUIcheck = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    return emailUIcheck.test(String(email).toLowerCase());
+}
+
+if (!validateEmail(emailUI.value)){
+    alert("You have entered an invalid email address!")
+    return (false)
+}
+
+// 2. Evaluate if phone number fits criteria of 8 digits
+
+if (phoneUI.value.length !== 8) {
+
     alert ("Phone number requires 8 digits")
     return false
 }
 
-// 2. Evaluate if Zip Code is within Cph
+// 3. Evaluate if Zip Code is within Cph
 
 if (zipUI.value < 1000 || zipUI.value > 3000) {
     alert ("We only deliver within Copenhagen area")
     return false
 }
 
-// 3. Evaluate if email 
 
 // Add additional checks 
-
 
     console.log ("User registered")
 
@@ -69,7 +80,3 @@ if (zipUI.value < 1000 || zipUI.value > 3000) {
 
 // save the user to local storage
 // redirect the user to the login page
-
-
-}
-
