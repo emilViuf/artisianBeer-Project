@@ -1,11 +1,11 @@
-body {background-color: #f48042;
+body {background-color: #f28e1c;
 text-align:center;
-font: italic 1.5em "Fira Sans", serif;
+font: 1.5em "Fira Sans", serif;
 margin:2px 2px;
 }
 
 a:link, a:visited {
-    background-color: #4CAF50;
+    background-color: rgb(133, 42, 14);
     color:black;
     padding: 14px 25px;
     text-align: center;
