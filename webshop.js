@@ -1,16 +1,9 @@
-// Import all product
 
-
-// Select the div for products
-//document.getElementById('showProducts').innerHTML = p1.productInformation()
-const DOMElement = document.getElementById('showProducts')
-// Create the HTML for each product
-var html = ''
+var htmlTableVariable = '<table border>'
 
 for (let i = 0; i < products.length; i++) {
-    html += products[i].productInformation()
+    htmlTableVariable += products[i].productInformation()
 }
+htmlTableVariable+= '</table>'
 
-DOMElement.innerHTML = html
-
-// Add the HTML to the div
+document.getElementById('showProducts').innerHTML = htmlTableVariable
