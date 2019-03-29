@@ -1,17 +1,16 @@
 body {background-color: #f28e1c;
     text-align:center;
-    font: 1.5em "Fira Sans", serif;
+        font: 1.5em "Fira Sans", serif;
     margin:2px 2px;
-    }
-    
-    a:link, a:visited {
-        background-color: rgb(133, 42, 14);
-        color:black;
-        padding: 14px 25px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 20px;
-        margin:4px 2px;
-        cursor: pointer;}
-    
+}
+
+table {
+    font-family: "Fira", sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+ 
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+  }
