@@ -1,9 +1,9 @@
 
-var htmlTableVariable = '<table border>';
+const DOMElement = document.getElementById('showProducts')
+var html= '';
 
         for (let i = 0; i < products.length; i++) {
-    htmlTableVariable+=products[i].productInformation()
+    html += products[i].productInformation()
 }
-htmlTableVariable+='</table>';
-document.getElementById('showProducts').innerHTML = htmlTableVariable;
+DOMElement.innerHTML = html 
 

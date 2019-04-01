@@ -3,14 +3,3 @@ body {background-color: #f28e1c;
         font: 1.5em "Fira Sans", serif;
     margin:2px 2px;
 }
-
-table {
-    font-family: "Fira", sans-serif;
-    border-collapse: collapse;
-    width: 100%;
- 
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: center;
-    padding: 8px;
-  }

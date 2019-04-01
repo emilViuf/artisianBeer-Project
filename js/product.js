@@ -1,8 +1,8 @@
 class Product {
     
-    constructor (name, productID,  type, colour, description, price, size,img) {
-        this.name = name;
+    constructor (productID, name, type, colour, description, price, size,img) {
         this.productID = productID; 
+        this.name = name;
         this.type = type;
         this.colour = colour; 
         this.description = description; 
@@ -10,17 +10,19 @@ class Product {
         this.size = size;
         this.img = img;
     }
- productInformation() { 
-      return '<tr>'+'<td colspan="2"><img src="'+ this.img +'" alt="Picture" height="242" width="142"></td></tr>' + 
-              '<td>' + this.name + '</td>' + 
-              '<td>' + this.productID + '</td>' + 
-              '<td>' + this.type + '</td>' + 
-              '<td>' + this.colour + '</td></tr><tr>' + 
-              '<td>' + this.description + '</td></tr><tr>  ' + 
-              '<td>' + this.price + '</td>' +  
-              '<td>' + this.size + '</td></tr>'; 
- }
-}
-console.log(Product.productInformation);
- 
 
+ productInformation() { 
+   return  "<div class=\"product\">" +
+              "<img>" + this.img +  
+			"<h3>" +
+				this.name +
+			"</h3>" +
+            "<p>" + this.description + "</p>"+ 
+            "<p>" + this.price + "</p>" + 
+ 			"<button data-product-id=" + this.id + "data-id=" + this.id + "onclick=\"onBuyMeClicked(this)\"> Buy me! </button>" +
+			"<a href=\"product.html?id=" + this.id +"\"> View details </a>" +
+		"</div>";
+} 
+}
+
+console.log(productInformation); 
