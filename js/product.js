@@ -13,16 +13,15 @@ class Product {
 
  productInformation() { 
    return  "<div class=\"product\">" +
-              "<img>" + this.img +  
-			"<h3>" +
-				this.name +
-			"</h3>" +
-            "<p>" + this.description + "</p>"+ 
-            "<p>" + this.price + "</p>" + 
- 			"<button data-product-id=" + this.id + "data-id=" + this.id + "onclick=\"onBuyMeClicked(this)\"> Buy me! </button>" +
-			"<a href=\"product.html?id=" + this.id +"\"> View details </a>" +
-		"</div>";
+                "<img src=\"" + this.img +"\" height=\"200\" width=\"100\" >" +
+			    "<h3>" + this.name + "</h3>" +
+                "<p>" + this.type + "</p>" + 
+                "<p>" + this.description + "</p>"+ 
+                "<p>" + this.price + "</p>" + 
+ 			    "<button data-product-id=" + this.productID + "data-id=" + this.productID + "onclick=\"onBuyMeClicked(this)\"> Buy me! </button>" +
+			    "<a href=\"productDetails.html?id=" + this.productID +"\">View details</a>" +
+		    "</div>";
 } 
 }
 
-console.log(productInformation); 
+

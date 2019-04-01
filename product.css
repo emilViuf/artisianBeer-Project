@@ -3,3 +3,7 @@ body {background-color: #f28e1c;
         font: 1.5em "Fira Sans", serif;
     margin:2px 2px;
 }
+ .product {
+     width: 400px; 
+     float: left; 
+ }
