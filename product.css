@@ -7,3 +7,16 @@ body {background-color: #f28e1c;
      width: 400px; 
      float: left; 
  }
+ 
+ .imageClass {
+    float:left; 
+    margin-left: 100px;
+    margin-right: 50px; 
+ }
+ .productDetails {
+    display: table;
+    margin: 0 auto;
+    text-align: left;
+
+}
+
