@@ -15,7 +15,9 @@ products.push(beer5);
 products.push(beer6); 
 
 function findProduct(productID){ 
-const product = products.find(product => product.id === parseInt(productId, 10));
+const product = products.find(product => product.ID === parseInt(productID, 10));
 return product;  
-}
+}; 
 
+var query='ab';
+console.log(products.filter(product => product.type.includes(query)));

@@ -76,7 +76,6 @@ if (zipUI.value < 1000 || zipUI.value > 3000) {
 
     users.push(new User(firstNameUI.value, lastNameUI.value, dobUI.value, 
     genderUI.value, emailUI.value, phoneUI.value, streetUI.value, numberUI.value, 
-    zipUI.value, cityUI.value, usernameUI.value, passwordUI.value))
+    zipUI.value, cityUI.value, usernameUI.value, passwordUI.value)); 
 
 // save the user to local storage
-// redirect the user to the login page
