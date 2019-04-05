@@ -2,11 +2,10 @@ console.log("user.js loaded")
 
 
 class User {
-    constructor(firstName, lastName, dob, gender, email, phone, street, number, zipCode, city, username, password) {
+    constructor(firstName, lastName, dob, email, phone, street, number, zipCode, city, username, password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dob = dob;
-        this.gender = gender;
         this.email = email;
         this.phone = phone;
         this.address = {
@@ -20,4 +19,3 @@ class User {
         this.password = password
     }
 }
-//user created

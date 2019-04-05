@@ -32,8 +32,9 @@ const addToCart = (productID, quant) => {
     if (!findProductbyID(cart,productID)) {
         cart.push({...findProductbyID(products, productID), quantity: quant}) 
     } else { 
-        findProductbyID(cart, productID).quanity += quant})  
+        findProductbyID(cart, productID).quanity += quant
     }
+    
     saveCart()
 }
 
@@ -42,3 +43,4 @@ const addToCart = (productID, quant) => {
 const loadCart=function() { 
     if (localStorage.getItem('cart') === null) {
  }
+}
