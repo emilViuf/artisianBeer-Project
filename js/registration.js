@@ -39,8 +39,8 @@ submitUI.onclick = function () {
 
     } 
 
-// We need to implement type of evaluation of the provided data
-// For the names only characters + space + dash
+// We need to implement type of evaluation of the provided da
+
 
 // 1. Evaluate if email 
 
@@ -51,7 +51,7 @@ function validateEmail(email) {
 
 if (!validateEmail(emailUI.value)){
     alert("You have entered an invalid email address!")
-    return (false)
+    return false
 }
 
 // 2. Evaluate if phone number fits criteria of 8 digits
