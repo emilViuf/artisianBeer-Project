@@ -11,7 +11,7 @@ class Product {
         this.img = img;
     }
 
- productInformation() { 
+productInformation() { 
    return  "<div class=\"product\">" +
                 "<img src=\"" + this.img +"\" height=\"200\" width=\"100\" >" +
 			    "<h3>" + this.name + "</h3>" +
@@ -36,5 +36,18 @@ productDetails() {
  } 
 }
 
-
+renderHTML() {
+    return `<tr> 
+                <td> 
+                    <img src ="${this.img}" style="height: 125px">
+                    </td> 
+                    <td>${this.name}</td>
+                    <td>${this.type}</td>
+                    <td>${this.price}</td>
+                    <td>
+                        <input type="number" class="quantity" min="1" max="99" value="1">
+                        <button class="add-cart-btn" data-id="${this.productID}" data-name="John">Add to Cart</button>
+                    </td>
+                </tr>
+    `};
 
