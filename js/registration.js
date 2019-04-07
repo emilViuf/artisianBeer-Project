@@ -1,11 +1,11 @@
 console.log("registration.js loaded")
+let users = getSavedUsers()
 
 // Create a binding for each UI (user interface) element on the html panel
 
 const firstNameUI = document.getElementById("firstName")
 const lastNameUI = document.getElementById("lastName")
 const dobUI = document.getElementById("dob")
-const genderUI = document.getElementById ("gender")
 const emailUI = document.getElementById ("email")
 const phoneUI = document.getElementById ("phone")
 const streetUI = document.getElementById ("street")
@@ -25,12 +25,11 @@ submitUI.onclick = function () {
     console.log("button was clicked")
 
  if(firstNameUI.value.length == 0 || lastNameUI.value.length == 0 
-    || dobUI.value.length == 0 || genderUI.value.length == 0 
-    || emailUI.value.length == 0 || phoneUI.value.length == 0
-    || streetUI.value.length == 0 || numberUI.value.lengh == 0
-    || zipUI.value.lengh == 0 || cityUI.value.lengh == 0
-    || usernameUI.value.length == 0 || passwordUI.value.length == 0 
-    || !checkboxUI.checked) {
+    || dobUI.value.length == 0 ||  emailUI.value.length == 0 
+    || phoneUI.value.length == 0 || streetUI.value.length == 0 
+    || numberUI.value.lengh == 0 || zipUI.value.lengh == 0 
+    || cityUI.value.lengh == 0 || usernameUI.value.length == 0 
+    || passwordUI.value.length == 0 || !checkboxUI.checked) {
 
         alert("please input details")
         return false
@@ -69,13 +68,16 @@ if (zipUI.value < 1000 || zipUI.value > 3000) {
     return false
 }
 
+// Create a new user from data and add him to the array of  users
 
-// Add additional checks 
-
-    console.log ("User registered")
-
-    users.push(new User(firstNameUI.value, lastNameUI.value, dobUI.value, 
-    genderUI.value, emailUI.value, phoneUI.value, streetUI.value, numberUI.value, 
+users.push(new User(firstNameUI.value, lastNameUI.value, dobUI.value, 
+    emailUI.value, phoneUI.value, streetUI.value, numberUI.value, 
     zipUI.value, cityUI.value, usernameUI.value, passwordUI.value)); 
 
+
+saveUsers(users)
+
+location.assign ('login.html')
+
 // save the user to local storage
+}
