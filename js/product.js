@@ -16,7 +16,7 @@ class Product {
                         "<img src=\"" + this.img +"\" height=\"200\" width=\"100\" >" +
                         "<h3>" + this.name + "</h3>" +
                         "<p>" + this.type + "</p>" + 
-                        "<p>" + this.price + "</p>" + 
+                        "<p>" + this.price + " DKK</p>" + 
                         "<button data-product-id=" + this.productID + "data-id=" + this.productID + "onclick=\"onBuyMeClicked(this)\"> Buy me! </button>" +
                         "<a href=\"productDetails.html?id=" + this.productID +"\">View details</a>" +
                     "</div>";
@@ -30,7 +30,7 @@ class Product {
                         "<p> Beer colour: " + this.colour + "</p>" + 
                         "<p> Description: "  + this.description + "</p>"+
                         "<p> Size: " + this.size + "</p>" + 
-                        "<p> Price: " + this.price + "</p>" + 
+                        "<p> Price: " + this.price + " DKK</p>" + 
                         "<button data-product-id=" + this.productID + "data-id=" + this.productID + "onclick=\"onBuyMeClicked(this)\"> Buy me! </button>" +
                     "</div>";
         } 
