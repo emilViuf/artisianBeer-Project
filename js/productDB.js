@@ -6,9 +6,10 @@ new Product(5, "Legally Blonde", "Cider", "Rose", "Crisp and refreshing. Funky r
 new Product(6, "Danish Pie", "Pilsner", "Light", "Bitter qualities, with notes of lemongrass.", 50, "330 ml.", "images/porter.jpg")]
 
 function findProduct(productID){ 
-const product = products.find(product => product.ID === parseInt(productID, 10));
+const product = products.find(product => product.productID == productID);
 return product;  
 }; 
 
 var query='ab';
 console.log(products.filter(product => product.type.includes(query)));
+

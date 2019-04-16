@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+
+    <h1>Shopping Cart</h1>
+
+
+    <div>
+        <table>
+            <thead>
+                    <tr> 
+                    <th> Name </th>
+                    <th> Price </th>
+                    
+                </tr>
+            </thead>
+            <tbody id="cart-content">
+                <tr> 
+                    <td> Beer1 </td>
+                    <td> 100 </td> 
+                </tr>
+                <tr> 
+                        <td> Beer2 </td>
+                        <td> 50 </td> 
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <p> VAT 25% </p>
+        <p id="totalPrice"> Total: </p>
+    </div>
+
+    <h3> Choose payment </h3>
+    <input type="radio"> <label> Credit card </label>
+    <input type="radio" disabled > <label> PayPal (coming soon) </label>
+
+
+    <div>
+        <input id="cardholderName" type="text" placeholder="Cardholder name">  
+        <input id="creditCardNumber"type="text" placeholder="Credit card number">
+        <input id="expiryDate" type="date" placeholder="Expiry date">
+        <input id="ccv" type="text" placeholder="CCV"> 
+        
+        <button id="continue-btn"> Payment </button>
+    </div>
+
+    <button id="back-btn" onclick="location.href='product.html'">Go back to shop</button>
+
+    <script src="./js/product.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/views.js"></script>
+</body>
+
+</html>
