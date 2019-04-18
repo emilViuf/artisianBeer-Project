@@ -27,18 +27,18 @@ function getShoppingCart() {
 };
 
 
-function renderShoppingCart() { 
-    
-//create functionality that renders our product 
-var cartInformation = ""; 
+function renderShoppingCart() {
 
-for (i=0; i<shoppingCart.length; i++) { 
-cartInformation += shoppingCart[i].name + " costs " + shoppingCart[i].price + " DKK."
-};
-// make a string that is html code to display correctly (tr td structure so that every element will get their own place)
+    //create functionality that renders our product 
+    var cartInformation = "";
 
-document.getElementById("cart-content").innerHTML = cartInformation;
+    for (i = 0; i < shoppingCart.length; i++) {
+        cartInformation += shoppingCart[i].name + " costs " + shoppingCart[i].price + " DKK."
+    };
+    // make a string that is html code to display correctly (tr td structure so that every element will get their own place)
 
-} 
+    document.getElementById("cart-content").innerHTML = cartInformation;
+
+}
 
 renderShoppingCart(); 
