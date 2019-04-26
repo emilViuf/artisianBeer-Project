@@ -1,81 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registration </title>
 </head>
+
 <body>
 
     <h1>Create a user</h1>
-     <div> 
-        <span>First Name</span> 
-        <input type="text" id="firstName"> 
+    <div>
+        <span>First Name</span>
+        <input type="text" id="firstName">
     </div>
 
     <div>
         <span>Last Name</span>
         <input type="text" id="lastName">
-    </div> 
-    
+    </div>
+
     <div>
         <span>Date of Birth</span>
         <input type="text" id="dob">
-    </div>   
+    </div>
 
     <div>
         <span>Email</span>
         <input type="text" id="email">
-    </div>  
+    </div>
 
     <div>
         <span>Phone Number</span>
         <input type="text" id="phone">
-    </div>   
+    </div>
 
     <div>
         <span>Street name</span>
         <input type="text" id="street">
-    </div>  
+    </div>
 
     <div>
         <span>House Number</span>
         <input type="text" id="houseNumber">
-    </div>  
+    </div>
 
     <div>
         <span>Zip</span>
         <input type="text" id="zip">
-    </div>  
+    </div>
 
     <div>
         <span>City</span>
-        <input type="text" id="city" placeholder= "Copenhagen" value= "Copenhagen" disabled>
-    </div> 
-    <!--we make the Cph a default city for your users, since we only deliver in CPh-->
+        <input type="text" id="city" placeholder="Copenhagen" value="Copenhagen" disabled>
+    </div>
+    <!--we make the Cph a default city for our users, since we only deliver in CPh-->
 
     <div>
         <span>Username</span>
         <input type="text" id="username">
-     </div> 
+    </div>
 
-     <div>
+    <div>
         <span>Password</span>
         <input type="password" id="password">
-    </div>  
+    </div>
 
     <div>
         <input type="checkbox" id="checkbox">
         <span>I agree to the terms and conditions</span>
-    </div>  
+    </div>
 
     <div>
         <input type="button" value="Complete regitration" id="submit-button">
-        
-    </div> 
+    </div>
+
+    <div>
+        <button id="back-btn" onclick="location.href='frontpage.html'">Go back to frontpage</button>
+    </div>
+
     <script src="./js/user.js"></script>
     <script src="./js/userDB.js"></script>
     <script src="./js/registration.js"></script>
 </body>
+
 </html>
