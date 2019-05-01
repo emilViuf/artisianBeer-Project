@@ -35,9 +35,6 @@ class Product {
       "</div>";
   }
 
-<<<<<<< HEAD
-        
-=======
   productDetails() {
     return "<div class=\"productDetails\">" +
       "<img  class = \"imageClass\" src=\"" + this.img + "\" height=\"400\" width=\"300\" >" +
@@ -67,5 +64,4 @@ class Product {
   // </tr>
   // `};
 
->>>>>>> f371b84a8cfe4344030bbd58cd1a6b76a061fabd
 }
