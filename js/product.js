@@ -1,17 +1,5 @@
 class Product {
 
-<<<<<<< HEAD
-        productInformation() { 
-        return  "<div class=\"product\">" +
-                        "<img src=\"" + this.img +"\" height=\"200\" width=\"100\" >" +
-                        "<h3>" + this.name + "</h3>" +
-                        "<p>" + this.type + "</p>" + 
-                        "<p>" + this.price + " DKK</p>" + 
-                        '<button id="buybutton" onclick="addToCart(this)" data-id="' + this.productID + '"> Buy me! </button>' +
-                        "<a href=\"productDetails.html?id=" + this.productID +"\">View details</a>" +
-                    "</div>";
-        } 
-=======
   constructor(productID, name, type, colour, description, price, size, img) {
     this.productID = productID;
     this.name = name;
@@ -22,7 +10,6 @@ class Product {
     this.size = size;
     this.img = img;
   }
->>>>>>> f371b84a8cfe4344030bbd58cd1a6b76a061fabd
 
   productInformation() {
     return "<div class=\"product\">" +
