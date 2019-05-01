@@ -56,7 +56,6 @@ submitUI.onclick = function () {
     // 2. Evaluate if phone number fits criteria of 8 digits
 
     if (phoneUI.value.length !== 8) {
-
         alert("Phone number requires 8 digits")
         return false
     }
