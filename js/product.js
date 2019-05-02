@@ -31,7 +31,8 @@ class Product {
       "<p> Description: " + this.description + "</p>" +
       "<p> Size: " + this.size + "</p>" +
       "<p> Price: " + this.price + " DKK</p>" +
-      "<button data-product-id=" + this.productID + "data-id=" + this.productID + "onclick=\"onBuyMeClicked(this)\"> Add to cart </button>" +
+      '<button id="buybutton" onclick="addToCart(this)" data-ID="' + this.productID + '"> Add to cart </button>' +
+      //"<button data-product-id=" + this.productID + "data-id=" + this.productID + "onclick=\"addToCart(this)\"> Add to cart </button>" +
       "</div>";
   }
 
