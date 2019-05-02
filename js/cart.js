@@ -1,7 +1,6 @@
 var shoppingCart = getShoppingCart();
 
 function addToCart(product) {
-
     const itemID = product.dataset.id;
     console.log(itemID)
 
@@ -54,7 +53,6 @@ function getShoppingCart() {
 };
 
 
-
 function renderShoppingCart() {
     //create functionality that renders  our shoppingCart 
     var cartInformation = "";
@@ -73,30 +71,22 @@ function renderLineItem(item) {
         "<td>" + item.name + "</td>" +
         "<td>" + item.price + "</td>" +
         "<td>" + item.quantity + "</td>" +
-        '<button id="addproduct" onclick="addToCart('+ item.id + ')" data-id="' + item.id + '"> + </button>' +
-        '<button id="removeproduct" onclick="minusCart('+ item.id + ')" data-id="' + item.id + '"> - </button>' +
-        '<button id="removebutton" onclick="removeFromCart('+ item.id +')" data-id="' + item.id + '"> Remove </button>' +
+        '<button id="addproduct" onclick="addToCart(this) " data-id="' + item.id + '"> Add </button>' +
+        '<button id="removebutton" onclick="removeFromCart(this)" data-id="' + item.id + '"> Remove </button>' +
         "<a href=\"productDetails.html?id=" + item.id + "\">View details</a>" +
         "</tr>";
 }
 
-/* var removeButtons = document.getElementById('removebutton')
-console.log(removeButtons); 
-for (i = 0; i < removeButtons.length; i++) {
-
-}
- */
-
-function minusCart () {
-
-}
-
-function removeFromCart () {
-    
+function updateCartTotal() {
+        var finalShoppingCart = document.getElementById()
+        var total = 0
+        for (var i = 0; i < shoppingCart.length; i++) {
+        var quantity = 
+        total = total + (price * quantity)
+    }
+    total = Math.round
 }
 
 if (location.href.includes('cart.html')) {
     renderShoppingCart();
 }
-
-
