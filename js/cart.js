@@ -77,16 +77,3 @@ if (location.href.includes('cart.html')) {
 }
 
 
-// function renderNewHTML () { 
-
-// const DOMElement = document.getElementById('cart-content')
-// var html = "";
-// for (let i = 0; i < products.length; i++) {
-//     html += products[i].renderLineItem ()
-// }
-// DOMElement.innerHTML = html
-
-// }
-
-// renderNewHTML () 
-
