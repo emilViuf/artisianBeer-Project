@@ -73,13 +73,15 @@ function renderLineItem(item) {
         "<td>" + item.price + "</td>" +
         "<td>" + item.quantity + "</td>" +
         '<button id="addproduct" onclick="addToCart(this) " data-id="' + item.id + '"> Add </button>' +
-        '<button id="removebutton" onclick="removeFromCart(this)" data-id="' + item.id + '"> Remove </button>' +
+        '<button id="removeproduct" onclick="removeProduct(this)" data-id="' + item.id + '"> Remove </button>' +
+        '<button id="removeall" onclick="removeAll(this)" data-id="' + item.id + '"> Remove all </button>' +
         "<a href=\"productDetails.html?id=" + item.id + "\">View details</a>" +
         "</tr>";
+
 }
 
 // MUST CHECK THIS REMOVE FUNCTION WITH MARTEN, IT WORKS, DON't ASK HOW OR WHY
-function removeFromCart(product) {
+function removeAll (product) {
    let itemID = product.dataset.id 
    for (let i = 0; i < shoppingCart.length; i++) {
         if (shoppingCart[i].id === itemID) {
@@ -121,6 +123,7 @@ document.getElementById("continue-btn").onclick = function () {
             alert("You need to enter your First and Last name!")
             return false
         } 
+        
     alert("Purchase has been completed. Congratulations")
     document.getElementById("cardholderName").value = ""; 
     document.getElementById("creditCardNumber").value  = ""; 
@@ -128,8 +131,6 @@ document.getElementById("continue-btn").onclick = function () {
         shoppingCart = []; 
         localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart)); 
         renderShoppingCart(); 
-    
-    
     }
 
 function validateName(name) {
