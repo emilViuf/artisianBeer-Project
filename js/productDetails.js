@@ -12,4 +12,4 @@ const product = products.find(product => product.productID === parseInt(productI
 
 // Create the HMTL code for the product detials to be shown to the user
 document.getElementById('details').innerHTML = product.productDetails();
-//gets the div with details id 
+//gets the div with details id

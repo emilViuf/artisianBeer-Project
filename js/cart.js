@@ -94,7 +94,7 @@ function removeProduct(product) {
         if (shoppingCart[i].id === itemID) {
             shoppingCart[i].quantity--;
             if (shoppingCart[i].quantity === 0) {
-                removeAll(product); 
+                removeAll(product);
             }
         }
     }
@@ -130,6 +130,7 @@ document.getElementById("continue-btn").onclick = function () {
     let creditcardNumber = document.getElementById("creditCardNumber").value
     let expiryDate = document.getElementById("expiryDate").value
     let ccv = document.getElementById("ccv").value
+    
     if (creditcardNumber.length !== 16) {
         alert("Please enter your 16 digit credit card number")
         return false
@@ -155,10 +156,11 @@ document.getElementById("continue-btn").onclick = function () {
 }
 
 function validateName(name) {
-    var nameCheck = /^[A-Za-z]+$/ //+ " " + /^[A-Za-z]+$/; check for RegEx for something that includes a blank space 
+    var nameCheck = '/^[A-Za-z]+([\ A-Za-z]+)*/';
     return nameCheck.test(String(name));
 }
 
+// After payment validation it stops... Whan  then ???
 if (location.href.includes('cart.html')) {
     renderShoppingCart();
 }
