@@ -83,11 +83,10 @@ function removeFromCart(product) {
    let itemID = product.dataset.id 
    for (let i = 0; i < shoppingCart.length; i++) {
         if (shoppingCart[i].id === itemID) {
-            let newShoppingCart = shoppingCart.splice(i, 1)    
-            localStorage.setItem("shoppingCart", JSON.stringify(newShoppingCart)); 
+            shoppingCart.splice(i, 1)    
+            localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart)); 
             renderShoppingCart();
-        }
-      
+        } 
 }
 }
 
