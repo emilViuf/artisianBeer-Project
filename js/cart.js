@@ -58,12 +58,13 @@ function renderShoppingCart() {
     var cartInformation = "";
     for (i = 0; i < shoppingCart.length; i++) {
         cartInformation += renderLineItem(shoppingCart[i])
-
     }
-    // shoppingCart[i].name + " costs " + shoppingCart[i].price + " DKK. <br>"
-    // make a string that is html code to display correctly (tr td structure so that every element will get their own place)
     document.getElementById("cart-content").innerHTML = cartInformation;
+    document.getElementById("totalPrice").innerHTML = "Your total price is " +  totalAmount () + " DKK." 
 }
+// shoppingCart[i].name + " costs " + shoppingCart[i].price + " DKK. <br>"
+    // make a string that is html code to display correctly (tr td structure so that every element will get their own place)
+  
 
 function renderLineItem(item) {
     return "<tr>" +
@@ -77,14 +78,64 @@ function renderLineItem(item) {
         "</tr>";
 }
 
-function updateCartTotal() {
-        var finalShoppingCart = document.getElementById()
-        var total = 0
-        for (var i = 0; i < shoppingCart.length; i++) {
-        var quantity = 
-        total = total + (price * quantity)
+// MUST CHECK THIS REMOVE FUNCTION WITH MARTEN, IT WORKS, DON't ASK HOW OR WHY
+function removeFromCart(product) {
+   let itemID = product.dataset.id 
+   for (let i = 0; i < shoppingCart.length; i++) {
+        if (shoppingCart[i].id === itemID) {
+            let newShoppingCart = shoppingCart.splice(i, 1)    
+            localStorage.setItem("shoppingCart", JSON.stringify(newShoppingCart)); 
+            renderShoppingCart();
+        }
+      
+}
+}
+
+function totalAmount() {
+        let total = 0; 
+        let VAT = 1.25;
+        for (var i = 0; i < shoppingCart.length; i++) { 
+        total += shoppingCart[i].price * shoppingCart[i].quantity
+  
     }
-    total = Math.round
+return total * VAT; 
+}
+
+document.getElementById("continue-btn").onclick = function () {
+        console.log("button clicked")
+
+        let cardholderName = document.getElementById("cardholderName").value
+        let creditcardNumber = document.getElementById("creditCardNumber").value 
+        let expiryDate = document.getElementById("expiryDate").value 
+        let ccv = document.getElementById("ccv").value 
+        if (creditcardNumber.length !== 16) {
+            alert("Please enter your 16 digit credit card number")
+            return false 
+        } 
+            
+        if (ccv.length !== 3) {
+            alert("Please enter the 3 digit security code")
+            return false 
+        }
+    
+        if (!validateName(cardholderName)) {
+            alert("You need to enter your First and Last name!")
+            return false
+        } 
+    alert("Purchase has been completed. Congratulations")
+    document.getElementById("cardholderName").value = ""; 
+    document.getElementById("creditCardNumber").value  = ""; 
+    document.getElementById("ccv").value = ""; 
+        shoppingCart = []; 
+        localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart)); 
+        renderShoppingCart(); 
+    
+    
+    }
+
+function validateName(name) {
+    var nameCheck = /^[A-Za-z]+$/ //+ " " + /^[A-Za-z]+$/; check for RegEx for something that includes a blank space 
+    return nameCheck.test(String(name));
 }
 
 if (location.href.includes('cart.html')) {
