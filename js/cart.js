@@ -68,7 +68,7 @@ function renderShoppingCart() {
 
 function renderLineItem(item) {
     return "<tr>" +
-        "<img src=\"" + item.img + "\" height=\"100\" width=\"50\" >" +
+        "<img src=\"" + item.img + "\" height=\"200\" width=\"150\" >" +
         "<td>" + item.name + "</td>" +
         "<td>" + item.price + "</td>" +
         "<td>" + item.quantity + "</td>" +
