@@ -97,7 +97,7 @@ function addProductWithAlert(product) {
 }
 
 //Here we created a function to remove product one by one, calling function removeAll if the quantity of that particular product has reached 0
-//We do so in order to avoid users going under 0 products 
+//We do so in order to avoid user 
 function removeProduct(product) {
     let itemID = product.dataset.id
     console.log(itemID)
