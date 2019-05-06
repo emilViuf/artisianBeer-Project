@@ -1,3 +1,5 @@
+//We define a class, Product, with several parameters 
+
 class Product {
 
   constructor(productID, name, type, colour, description, price, size, img) {
@@ -11,6 +13,7 @@ class Product {
     this.img = img;
   }
 
+// This function returns the way the products are displayed in product.html
   productInformation() {
     return "<div style=\"margin-bottom: 75px\" class=\"product\">" +
       "<img src=\"" + this.img + "\" height=\"300\" width=\"250\" >" +
@@ -18,10 +21,12 @@ class Product {
       "<p>" + this.type + "</p>" +
       "<p>" + this.price + " DKK</p>" +
       "<p><a href=\"productDetails.html?id=" + this.productID + "\">View details</a></p>" +
-      '<button id="buybutton" onclick="addToCart(this)" data-ID="' + this.productID + '"> Add to cart </button>' +
+      '<button id="buybutton" onclick="(this)" data-ID="' + this.productID + '"> Add to cart </button>' +
       "</div>";
   }
 
+  // We declare a function productDetails(), that allows us to learn more information about the product 
+  // once on productDetails page 
   productDetails() {
     return "<div class=\"productDetails\">" +
       "<img  class = \"imageClass\" src=\"" + this.img + "\" height=\"400\" width=\"300\" >" +
@@ -31,9 +36,7 @@ class Product {
       "<p> Description: " + this.description + "</p>" +
       "<p> Size: " + this.size + "</p>" +
       "<p> Price: " + this.price + " DKK</p>" +
-      '<button id="buybutton" onclick="addToCart(this)" data-ID="' + this.productID + '"> Add to cart </button>' +
-      //"<button data-product-id=" + this.productID + "data-id=" + this.productID + "onclick=\"addToCart(this)\"> Add to cart </button>" +
-      "</div>";
+      '<button id="buybutton" onclick="addProductWithAlert(this)" data-ID="' + this.productID + '"> Add to cart </button>' +
+       "</div>";
   }
-
-}
+  }

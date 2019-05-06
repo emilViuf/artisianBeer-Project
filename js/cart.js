@@ -36,7 +36,7 @@ function addToCart(product) {
     //if exists is false, we then create a new lineItem, which we push into our shoppingCart 
 
     localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
-}
+   }
 //
 
 //we make a function that gets the shopping cart from localStorage and checks if there is any lineItem there 
@@ -62,9 +62,10 @@ function renderShoppingCart() {
     document.getElementById("cart-content").innerHTML = cartInformation;
     document.getElementById("totalPrice").innerHTML = "Your total price is " + totalAmount() + " DKK."
 }
-// shoppingCart[i].name + " costs " + shoppingCart[i].price + " DKK. <br>"
-// make a string that is html code to display correctly (tr td structure so that every element will get their own place)
 
+
+//we create a function that displays the items on users' shopping list, with buttons to increase/decrease amount of items, or 
+//remove all (from the same type)
 
 function renderLineItem(item) {
     return "<tr>" +
@@ -77,15 +78,26 @@ function renderLineItem(item) {
         '<button id="removeall" onclick="removeAll(this)" data-id="' + item.id + '"> Remove all </button>' +
         "<a href=\"productDetails.html?id=" + item.id + "\"> View details </a>" +
         "</tr>";
-
 }
 
-
+//Here we delcare a function addProduct which call the function addToCart, going through all conditions previously explained
+//
 function addProduct(product) {
     addToCart(product);
     renderShoppingCart();
 }
 
+//We create this function, similar to the one above, except this one will give user the alert "Product Added!" only when 
+//pressing add to cart button either in the product catalogue page, or on the detailed product information page. 
+//We wanted to have an alert so that the user can have a sort of feedback when his product has been added to the cart 
+
+function addProductWithAlert(product) {
+    addToCart(product);
+    alert("Product Added!");
+}
+
+//Here we created a function to remove product one by one, calling function removeAll if the quantity of that particular product has reached 0
+//We do so in order to avoid users going under 0 products 
 function removeProduct(product) {
     let itemID = product.dataset.id
     console.log(itemID)
@@ -102,6 +114,7 @@ function removeProduct(product) {
     renderShoppingCart();
 }
 
+//We have created a function that permits us to remove all beers of the same type 
 function removeAll(product) {
     let itemID = product.dataset.id
     for (let i = 0; i < shoppingCart.length; i++) {
@@ -113,6 +126,7 @@ function removeAll(product) {
     }
 }
 
+//We have made a function to calculate the total amount of the products in our shopping cart, taking VAT into consideration
 function totalAmount() {
     let total = 0;
     let VAT = 1.25;
@@ -123,14 +137,18 @@ function totalAmount() {
     return total * VAT;
 }
 
+//If the button with the id "continue-btn" has been clicked, function () {} will be called
 document.getElementById("continue-btn").onclick = function () {
-    console.log("button clicked")
+  console.log("button clicked")
 
+//we assign the value inputted in the elements with their particular id to these specific variables ? 
     let cardholderName = document.getElementById("cardholderName").value
     let creditcardNumber = document.getElementById("creditCardNumber").value
     let expiryDate = document.getElementById("expiryDate").value
     let ccv = document.getElementById("ccv").value
-    
+
+    //we access to DOM elements by id, to verify the values (information) inputted 
+    //The credit card number length must be at least 16 digit, if not the function will return false and give an alert 
     if (creditcardNumber.length !== 16) {
         alert("Please enter your 16 digit credit card number")
         return false
@@ -155,6 +173,7 @@ document.getElementById("continue-btn").onclick = function () {
     renderShoppingCart();
 }
 
+//We declare a function that is supposed to verify whether the name introduced contains letters 
 function validateName(name) {
     var nameCheck = '/^[A-Za-z]+([\ A-Za-z]+)*/';
     return nameCheck.test(String(name));
