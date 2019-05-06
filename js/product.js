@@ -13,7 +13,7 @@ class Product {
 
   productInformation() {
     return "<div style=\"margin-bottom: 75px\" class=\"product\">" +
-      "<img src=\"" + this.img + "\" height=\"300\" width=\"175\" >" +
+      "<img src=\"" + this.img + "\" height=\"300\" width=\"250\" >" +
       "<h3>" + this.name + "</h3>" +
       "<p>" + this.type + "</p>" +
       "<p>" + this.price + " DKK</p>" +
