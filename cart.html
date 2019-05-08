@@ -38,13 +38,16 @@
     <input type="radio" disabled> <label> PayPal (coming soon) </label>
 
 
+    
     <div>
-        <input id="cardholderName" type="text" placeholder="Cardholder name">
-        <input id="creditCardNumber" type="text" placeholder="Credit card number">
-        <input id="expiryDate" type="date" placeholder="Expiry date">
-        <input id="ccv" type="text" placeholder="CCV">
+        <form> 
+        <input id="cardholderName" type="text" placeholder="Cardholder name" name="cardholderName">
+        <input id="creditCardNumber" type="text" placeholder="Credit card number" name="ccn">
+        <input id="expiryDate" type="date" placeholder="Expiry date" name="exdate">
+        <input id="ccv" type="text" placeholder="CCV" name="ccv">
 
         <button id="continue-btn"> Payment </button>
+        </form>
     </div>
 
     <button id="back-btn" onclick="location.href='product.html'">Go back to shop</button> 

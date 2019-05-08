@@ -18,8 +18,9 @@ const checkboxUI = document.getElementById("checkbox")
 const submitUI = document.getElementById("submit-button")
 
 // Now we have linked them all up
-// Add functionality to the button click
+// Add functionality to the click button
 // Create a function that responds to a click on the submit button
+// cehcks if all fields are set, if not, it returns false
 
 submitUI.onclick = function () {
     console.log("button was clicked")
@@ -33,14 +34,36 @@ submitUI.onclick = function () {
 
         alert("please input details")
         return false
-        // means please stop do not do anything
-        // we are checking of one of them is empty
-
     }
 
     // We need to implement type of evaluation of the provided data
 
+    var nameCheck = /^[A-Za-z]+$/;
+    if (!nameCheck.test(String(firstNameUI.value))) {
+        alert("You have entered an invalid first name");
+        return false;
+    }
 
+    if (!nameCheck.test(String(lastNameUI.value))) {
+        alert("You have entered an invalid last name");
+        return false;
+    }
+
+    if (dobUI.value.length === 0) {
+        alert("Please enter a valid date of birth")
+        return false;
+    }
+    var streetCheck = /^[A-Za-z ]+$/;
+    if (!streetCheck.test(String(streetUI.value))) {
+        alert("You have entered an invalid street name");
+        return false;
+    }
+
+    var cityCheck = /^[A-Za-z ]+$/;
+    if (!cityCheck.test(String(cityUI.value))) {
+        alert("You have entered an invalid city name");
+        return false;
+    }
     // 1. Evaluate if email 
 
     function validateEmail(email) {
@@ -56,7 +79,7 @@ submitUI.onclick = function () {
     // 2. Evaluate if phone number fits criteria of 8 digits
 
     if (phoneUI.value.length !== 8) {
-        alert("Phone number requires 8 digits")
+        alert("Phone number is invalid")
         return false
     }
 
@@ -78,5 +101,5 @@ submitUI.onclick = function () {
 
     location.assign('login.html')
 
-    // save the user to local storage
+    // Save the user to local storage
 }

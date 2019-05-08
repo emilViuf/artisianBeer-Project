@@ -1,6 +1,8 @@
+// We create a Product class with properties (productID, name, ...)
+// The way we give value to Product properties is through the parameters of the constructor
+// The values of the parameters get assigned to the properties of the product
 class Product {
-
-  constructor(productID, name, type, colour, description, price, size, img) {
+    constructor(productID, name, type, colour, description, price, size, img) {
     this.productID = productID;
     this.name = name;
     this.type = type;
@@ -11,6 +13,7 @@ class Product {
     this.img = img;
   }
 
+// THis function creates the html for the product page for the specific product 
   productInformation() {
     return "<div style=\"margin-bottom: 75px\" class=\"product\">" +
       "<img src=\"" + this.img + "\" height=\"300\" width=\"250\" >" +
@@ -22,8 +25,8 @@ class Product {
       "</div>";
   }
 
-  // We declare a function productDetails(), that allows us to 
-  productDetails() {
+  // We declare a function productDetails(), that allows us to create the html for the productDetails page for this specific product
+    productDetails() {
     return "<div class=\"productDetails\">" +
       "<img  class = \"imageClass\" src=\"" + this.img + "\" height=\"400\" width=\"300\" >" +
       "<h3>" + this.name + "</h3>" +

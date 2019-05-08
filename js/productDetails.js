@@ -1,15 +1,15 @@
-// Identifying for which product the details should be shown
 
+// We identify for which product the details should be shown, through the URL
 const productID = location.search.substring(4);
-//this is supposed to extract the productID by removing the query from URL 
+// We extract the productID by calling the substring method on the query string 
 
 
-// Locating this product in our database and retrieving the product information
-const product = products.find(product => product.productID === parseInt(productID, 10));
-//this is finding the product with the particular ID 
+const product = findProduct(parseInt(productID, 10));
+// We search for the product with the particular ID and assign this to a constant called product 
+// productID is a string, we convert it to a number in base 10
 
 
-// Create the HMTL code for the product details to be shown to the user
+// We create the html code for the product details to be shown to the user
 document.getElementById('details').innerHTML = product.productDetails();
-//gets the div with details id
+// We the get the div with the id 'details', assigning the productDetails to its innertHTML 
 

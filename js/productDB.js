@@ -1,4 +1,4 @@
-//Here we attribute to contstant products, the array containing our products (objects)
+//  Here we create the array containing our product objects and assign it to a constant called products 
 
 const products = [new Product(1, "Funky Town", "Pale Ale", "Medium amber", "Light malt flavour, with tropical and floral qualities. Dry and bitter aftertaste.", 50, "330 ml.", "images/paleale.png"),
 new Product(2, "Cuz I Rye", "Rye Beer", "Red Brown ", "Round spiciness from the rye, with a balanced malty sweetness.", 50, "330 ml.", "images/ryebeer.png"),
@@ -10,12 +10,8 @@ new Product(7, "Silky Wheat", "Wheat Beer", "Golden", "Silky mouthfeel, with a r
 new Product(8, "Finesse", "Brown IPA", "Medium brown", "Hints of toffee and stone fruit.", 50, "330 ml.", "images/ipa.png"),
 new Product(9, "Chocolate Addict", "Chocolate stout", "Mahogany", "Noticeable flavours of dark chocolate and roasted malt.", 50, "330 ml.", "images/stout.png")]
 
-//We create a function that searches for the product with the same productID in the query ?? 
+//  We create a function that searches for the product with the given productID and returns it 
 function findProduct(productID) {
     const product = products.find(product => product.productID == productID);
     return product;
 };
-
-var query = 'ab';
-console.log(products.filter(product => product.type.includes(query)));
-
