@@ -13,7 +13,7 @@ document.getElementById('showProducts').innerHTML = html
 // The search function uses the input from the search field, we get its value and change it to lower case
 // We create a variable divs, that stores all the divs with the class name product 
 function search() {
-    var input = document.getElementById("search").value.toLowerCase;
+    var input = document.getElementById("search").value.toLowerCase();
     var divs = document.getElementsByClassName("product");
 
 // We loop through all the divs, and the ones that match our input field we set them to display block 

@@ -15,3 +15,5 @@ function findProduct(productID) {
     const product = products.find(product => product.productID == productID);
     return product;
 };
+
+
