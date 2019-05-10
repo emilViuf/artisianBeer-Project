@@ -1,7 +1,6 @@
 console.log("database loaded")
 
 //  We create a function to get a copy of all users from the localStorage
-
 function getSavedUsers() {
   let users;
 

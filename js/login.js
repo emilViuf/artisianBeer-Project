@@ -1,5 +1,8 @@
 console.log('login.js loaded')
 
+// we create a variable isLoggedIn that we set to false; we can use this to verify if the user is logged in or not 
+var isLoggedIn = false; 
+
 // this function returns the users from the localStorage 
 var users = getSavedUsers()
 
@@ -13,6 +16,8 @@ function getInfo() {
 		// checks if user input matches username and password of a current index of the users array
 		if (username == users[i].username && password == users[i].password) {
 			alert(username + " is logged in");
+			// if the user is logged in, we set isLoggedIn to true
+			isLoggedIn = true; 
 			location.assign('frontpage.html');
 			// stop the function if this is found to be true
 			return;

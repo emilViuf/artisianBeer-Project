@@ -184,7 +184,7 @@ if (location.href.includes('cart.html')) {
             return false
         }
 
-        alert("Purchase has been completed. Congratulations")
+        alert("Purchase has been completed. Congratulations. Your order is now on the way")
 
         // Once payment has been validated, we clear the html fields, empty the shoppingCart
         // And then we render the shoppingCart
