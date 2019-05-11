@@ -1,10 +1,8 @@
-console.log("registration.js loaded")
 let users = getSavedUsers()
 
 // Create a binding for each UI (user interface) element on the html panel
 
-const firstNameUI = document.getElementById("firstName")
-const lastNameUI = document.getElementById("lastName")
+const fullNameUI = document.getElementById("fullName")
 const dobUI = document.getElementById("dob")
 const emailUI = document.getElementById("email")
 const phoneUI = document.getElementById("phone")
@@ -25,8 +23,7 @@ const submitUI = document.getElementById("submit-button")
 submitUI.onclick = function () {
     console.log("button was clicked")
 
-    if (firstNameUI.value.length == 0 || lastNameUI.value.length == 0
-        || dobUI.value.length == 0 || emailUI.value.length == 0
+    if (fullNameUI.value.length == 0 || dobUI.value.length == 0 || emailUI.value.length == 0
         || phoneUI.value.length == 0 || streetUI.value.length == 0
         || numberUI.value.lengh == 0 || zipUI.value.lengh == 0
         || cityUI.value.lengh == 0 || usernameUI.value.length == 0
@@ -38,16 +35,12 @@ submitUI.onclick = function () {
 
     // We need to implement type of evaluation of the provided data
 
-    var nameCheck = /^[A-Za-z]+$/;
-    if (!nameCheck.test(String(firstNameUI.value))) {
-        alert("You have entered an invalid first name");
+    var nameCheck = /^[A-Za-z- " "]+$/;
+    if (!nameCheck.test(String(fullNameUI.value))) {
+        alert("You have entered an invalid full name");
         return false;
     }
 
-    if (!nameCheck.test(String(lastNameUI.value))) {
-        alert("You have entered an invalid last name");
-        return false;
-    }
 
     if (dobUI.value.length === 0) {
         alert("Please enter a valid date of birth")
@@ -92,7 +85,7 @@ submitUI.onclick = function () {
 
     // Create a new user from data and add him to the array of  users
 
-    users.push(new User(firstNameUI.value, lastNameUI.value, dobUI.value,
+    users.push(new User(fullNameUI.value, dobUI.value,
         emailUI.value, phoneUI.value, streetUI.value, numberUI.value,
         zipUI.value, cityUI.value, usernameUI.value, passwordUI.value));
 

@@ -164,10 +164,14 @@ if (location.href.includes('cart.html')) {
         // We access the DOM elements by id, to verify the values (the information) inputted 
         // If the information is invalid, the function will return false and give an alert 
 
-        if (!validateName(cardholderName)) {
-            alert("You need to enter your First and Last name!")
+        // if (!validateName(cardholderName)) {
+        //     alert("You need to enter your First and Last name!")
+        //     return false
+        // }
+        if (localStorage.getItem("loggedInUser") !== cardholderName) {
+            alert("invalid crendentials")
             return false
-        }
+        } 
 
         if (creditcardNumber.length !== 16) {
             alert("Please enter your 16 digit credit card number")
@@ -184,7 +188,7 @@ if (location.href.includes('cart.html')) {
             return false
         }
 
-        alert("Purchase has been completed. Congratulations. Your order is now on the way")
+        alert("Purchase has been completed. Congratulations")
 
         // Once payment has been validated, we clear the html fields, empty the shoppingCart
         // And then we render the shoppingCart
@@ -194,6 +198,7 @@ if (location.href.includes('cart.html')) {
         shoppingCart = [];
         localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
         renderShoppingCart();
+
     }
     renderShoppingCart();
 }
