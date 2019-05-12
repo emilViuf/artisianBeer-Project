@@ -1,3 +1,5 @@
+
+
 body {background-color: rgb(236, 209, 209);
 text-align:center;
 font: 1.5em "Fira Sans", serif;
@@ -5,7 +7,7 @@ margin:2px 2px;
 }
 
 a:link, a:visited {
-    background-color: rgb(151, 204, 140);
+    background-color: rgb(15, 170, 131);
     color:black;
     padding: 14px 25px;
     text-align: center;
@@ -13,5 +15,95 @@ a:link, a:visited {
     display: inline-block;
     font-size: 20px;
     margin:4px 2px;
-    cursor: pointer;}
-    
+    cursor: pointer;
+}
+
+.product {
+    width: 400px; 
+    float: left; 
+}
+
+.imageClass {
+   float:left; 
+   margin-left: 100px;
+   margin-right: 50px; 
+}
+.productDetails {
+   display: table;
+   margin: 0 auto;
+   text-align: left;
+
+}
+
+#showProducts {
+margin: 20px;
+}
+
+.menu  {
+    margin: auto;
+    width: 1350px; 
+ 
+}   
+
+#navbar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(0, 0, 0);
+      }
+      
+#navbar li {
+    list-style-type: none;
+    float: left;
+      }
+      
+#navbar li a {
+        display: block;
+        padding: 18px;
+        text-align:center;
+        background-color: rgb(15, 170, 131);
+ 
+    } 
+#navbar li a:hover {
+        background-color: rgb(236, 209, 209);
+        color: rgb(15, 170, 131);
+      } 
+#navbar  li a, .dropbtn {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+#navbar      li a:hover, .dropdown:hover .dropbtn {
+        background-color: rgb(231, 171, 171);
+      }
+      
+#navbar      li.dropdown {
+        display: block;
+      }
+      
+.dropcontent {
+        display: none;
+        position: absolute;
+        background-color: rgb(0, 0, 0);
+        min-width: 195px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+.dropcontent a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      
+.dropcontent a:hover {background-color: #f1f1f1;}
+      
+.dropdown:hover .dropcontent {
+        display: block;
+      }

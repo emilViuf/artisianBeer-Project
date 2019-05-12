@@ -169,7 +169,7 @@ if (location.href.includes('cart.html')) {
         //     return false
         // }
         if (localStorage.getItem("loggedInUser") !== cardholderName) {
-            alert("invalid crendentials")
+            alert("Please log in to complete your purchase")
             return false
         } 
 

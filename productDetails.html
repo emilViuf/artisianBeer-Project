@@ -2,16 +2,30 @@
 <html> 
    <head>
     
-      <link rel="stylesheet" type="text/css" href="./styles/product.css" /> 
-      <a href="frontpage.html" class="button"> Home </a>
-      <a href="aboutus.html" class="button">About us</a>
-      <a href="product.html" class="button"> Beer catalogue </a>
-      <a href="cart.html" class="button">  View cart </a>
+      <link rel="stylesheet" type="text/css" href="./styles/stylingsheet.css" /> 
+ 
       
     <title> Product </title>
    
    </head> 
    <body> 
+         <div class="menu">
+               <ul id="navbar"> 
+                    <li><a href="frontpage.html" class="button">Home</a></li>
+                   <li><a href="aboutus.html" class="button">About us</a></li>
+                   <li><a href="product.html" class="button">Beer catalogue</a></li>
+                   <li class="dropdown">
+                           <a href="javascript:void(0)"
+                   class="dropdownbtn"> Are you a member? </a>
+                       <div class = "dropcontent">
+                  <a href="login.html" class="button">Sign in</a>
+                  <a href="registration.html" class="button">Register</a>
+                       </div>
+                       </li>
+                       <li style="float:right"><a href="cart.html" class="button">Shopping Cart</a></li>
+                       </ul>
+
+</div>
             <hr>
             <div id = "details"></div> 
    </body>
