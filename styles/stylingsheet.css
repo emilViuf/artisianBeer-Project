@@ -18,6 +18,13 @@ a:link, a:visited {
     cursor: pointer;
 }
 
+.aboutus {
+    text-align: center;
+    display: block;
+    margin-top: 75px; 
+    margin-left: 200px; 
+    margin-right: 200px;  
+}
 .product {
     width: 400px; 
     float: left; 
