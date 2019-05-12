@@ -13,6 +13,7 @@ function getInfo() {
 			alert(username + " is logged in");
 			location.assign('frontpage.html');
 			localStorage.setItem('loggedInUser', users[i].fullName);
+			//we set the fullName of the user in localStorage
 			// stop the function if this is found to be true
 			return false;
 		}
