@@ -171,7 +171,7 @@ if (location.href.includes('cart.html')) {
         if (localStorage.getItem("loggedInUser") !== cardholderName) {
             alert("Please log in to complete your purchase")
             return false
-        } 
+        }
 
         if (creditcardNumber.length !== 16) {
             alert("Please enter your 16 digit credit card number")
@@ -181,7 +181,7 @@ if (location.href.includes('cart.html')) {
             alert("Please enter a valid card date")
             return false
         }
-        
+
         // Here we check if the length of the ccv value is not 3 or if it not a number, it should return the alert 
         if (ccv.length !== 3 || isNaN(ccv)) {
             alert("Please enter the 3 digit security code")

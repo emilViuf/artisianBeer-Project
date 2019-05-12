@@ -1,4 +1,4 @@
-// We create a User class with properties (firstName, lastName, ...)
+// We create a User class with properties (fullName, dob, email...)
 // The way we give value to User properties is through the parameters of the constructor
 // The values of the parameters get assigned to the properties of the user
 class User {
