@@ -13,9 +13,9 @@ class User {
             zip: zipCode,
             city: city
         }
-   
+
         this.username = username;
         this.password = password;
-        
+
     }
 }

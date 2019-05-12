@@ -6,6 +6,7 @@ function getSavedUsers() {
 
   // we check if there are any users in localStorage 
   // If there aren't any, we create a new default user, Tatiana
+
   if (localStorage.getItem('users') === null) {
     users = [new User("Tatiana Andersen", "111281", "81tand@gmail.com",
       "51880545", "Ryparken", "23", "2100", "Copenhagen", "Taty", "1234")];

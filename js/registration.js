@@ -18,7 +18,7 @@ const submitUI = document.getElementById("submit-button")
 // Now we have linked them all up
 // Add functionality to the click button
 // Create a function that responds to a click on the submit button
-// cehcks if all fields are set, if not, it returns false
+// Checks if all fields are set, if not, it returns false
 
 submitUI.onclick = function () {
     console.log("button was clicked")
@@ -35,6 +35,8 @@ submitUI.onclick = function () {
 
     // We need to implement type of evaluation of the provided data
 
+    // 1. Evaluate name and date of birth
+
     var nameCheck = /^[A-Za-z- " "]+$/;
     if (!nameCheck.test(String(fullNameUI.value))) {
         alert("You have entered an invalid full name");
@@ -46,18 +48,8 @@ submitUI.onclick = function () {
         alert("Please enter a valid date of birth")
         return false;
     }
-    var streetCheck = /^[A-Za-z ]+$/;
-    if (!streetCheck.test(String(streetUI.value))) {
-        alert("You have entered an invalid street name");
-        return false;
-    }
 
-    var cityCheck = /^[A-Za-z ]+$/;
-    if (!cityCheck.test(String(cityUI.value))) {
-        alert("You have entered an invalid city name");
-        return false;
-    }
-    // 1. Evaluate if email 
+    // 2. Evaluate email 
 
     function validateEmail(email) {
         var emailUIcheck = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
@@ -69,21 +61,42 @@ submitUI.onclick = function () {
         return false
     }
 
-    // 2. Evaluate if phone number fits criteria of 8 digits
+    // 3. Evaluate if phone number fits criteria of 8 digits
 
     if (phoneUI.value.length !== 8) {
         alert("Phone number is invalid")
         return false
     }
 
-    // 3. Evaluate if Zip Code is within Cph
+
+    var streetCheck = /^[A-Za-z ]+$/;
+    if (!streetCheck.test(String(streetUI.value))) {
+        alert("You have entered an invalid street name");
+        return false;
+    }
+
+
+    // 4. Evaluate if Zip Code is within Cph
 
     if (zipUI.value < 1000 || zipUI.value > 3000) {
         alert("We only deliver within Copenhagen area")
         return false
     }
 
-    // Create a new user from data and add him to the array of  users
+
+
+    // not needed since we have it per default
+    // var cityCheck = /^[A-Za-z ]+$/;
+    // if (!cityCheck.test(String(cityUI.value))) {
+    //     alert("You have entered an invalid city name");
+    //     return false;
+    // }
+
+
+
+
+
+    // Create a new user from data and add him to the array of users
 
     users.push(new User(fullNameUI.value, dobUI.value,
         emailUI.value, phoneUI.value, streetUI.value, numberUI.value,

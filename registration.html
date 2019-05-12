@@ -9,91 +9,90 @@
     <link rel="stylesheet" type="text/css" href="./styles/stylingsheet.css">
 </head>
 <div class="menu">
-        <ul id="navbar"> 
-             <li><a href="frontpage.html" class="button">Home</a></li>
-            <li><a href="aboutus.html" class="button">About us</a></li>
-            <li><a href="product.html" class="button">Beer catalogue</a></li>
-            <li class="dropdown">
-                    <a href="javascript:void(0)"
-            class="dropdownbtn"> Are you a member? </a>
-                <div class = "dropcontent">
-           <a href="login.html" class="button">Sign in</a>
-           <a href="registration.html" class="button">Register</a>
-                </div>
-                </li>
-           <li><a href="cart.html" class="button">Shopping Cart</a></li>
+    <ul id="navbar">
+        <li><a href="frontpage.html" class="button">Home</a></li>
+        <li><a href="aboutus.html" class="button">About us</a></li>
+        <li><a href="product.html" class="button">Beer catalogue</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropdownbtn"> Are you a member? </a>
+            <div class="dropcontent">
+                <a href="login.html" class="button">Sign in</a>
+                <a href="registration.html" class="button">Register</a>
+            </div>
+        </li>
+        <li><a href="cart.html" class="button">Shopping Cart</a></li>
 
-                </ul>
+    </ul>
 </div>
 
 <h1> Register as a member </h1>
 
 <body>
-<form> 
-    <div>
-        <span>Full Name</span>
-        <input type="text" id="fullName">
-    </div>
+    <form>
+        <div>
+            <span>Full Name</span>
+            <input type="text" id="fullName">
+        </div>
 
-    <div>
-        <span>Date of Birth</span>
-        <input type="date" id="dob">
-    </div>
+        <div>
+            <span>Date of Birth</span>
+            <input type="date" id="dob">
+        </div>
 
-    <div>
-        <span>Email</span>
-        <input type="text" id="email">
-    </div>
+        <div>
+            <span>Email</span>
+            <input type="text" id="email">
+        </div>
 
-    <div>
-        <span>Phone Number</span>
-        <input type="number" id="phone">
-    </div>
+        <div>
+            <span>Phone Number</span>
+            <input type="number" id="phone">
+        </div>
 
-    <div>
-        <span>Street name</span>
-        <input type="text" id="street">
-    </div>
+        <div>
+            <span>Street name</span>
+            <input type="text" id="street">
+        </div>
 
-    <div>
-        <span>House Number</span>
-        <input type="text" id="houseNumber">
-    </div>
+        <div>
+            <span>House Number</span>
+            <input type="text" id="houseNumber">
+        </div>
 
-    <div>
-        <span>Zip</span>
-        <input type="number" id="zip">
-    </div>
+        <div>
+            <span>Zip</span>
+            <input type="number" id="zip">
+        </div>
 
-    <div>
-        <span>City</span>
-        <input type="text" id="city" placeholder="Copenhagen" value="Copenhagen" disabled>
-    </div>
-    <!--we make the Cph a default city for our users, since we only deliver in CPh-->
+        <div>
+            <span>City</span>
+            <input type="text" id="city" placeholder="Copenhagen" value="Copenhagen" disabled>
+        </div>
+        <!--we make the Cph a default city for our users, since we only deliver in CPh-->
 
-    <div>
-        <span>Username</span>
-        <input type="text" id="username">
-    </div>
+        <div>
+            <span>Username</span>
+            <input type="text" id="username">
+        </div>
 
-    <div>
-        <span>Password</span>
-        <input type="password" id="password">
-    </div>
+        <div>
+            <span>Password</span>
+            <input type="password" id="password">
+        </div>
 
-    <br>
-    <br>
+        <br>
+        <br>
 
-    <div>
-        <input type="checkbox" id="checkbox">
-        <span>I agree to the terms and conditions</span>
-    </div>
+        <div>
+            <input type="checkbox" id="checkbox">
+            <span>I agree to the terms and conditions</span>
+        </div>
 
-    <div>
-        <input type="button" value="Complete registration" id="submit-button">
-    </div>
+        <div>
+            <input type="button" value="Complete registration" id="submit-button">
+        </div>
 
-</form>
+    </form>
 
     <button id="back-btn" onclick="location.href='frontpage.html'">Go back to frontpage</button>
     <script src="./js/user.js"></script>

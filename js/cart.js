@@ -1,7 +1,7 @@
-//We store the shoppingCart in the shoppingCart variable
+// We store the shoppingCart in the shoppingCart variable
 var shoppingCart = getShoppingCart();
 
-//Function to add products to cart
+// Function to add products to cart
 function addToCart(product) {
     const itemID = product.dataset.id;
     console.log(itemID)
@@ -10,17 +10,17 @@ function addToCart(product) {
     let exists = false;
     let index;
 
-    //we create a for loop for the shoppingCart to check if we already have the chosen product in the cart
+    // we create a for loop for the shoppingCart to check if we already have the chosen product in the cart
 
     for (let i = 0; i < shoppingCart.length; i++) {
         if (shoppingCart[i].id === itemID) {
             exists = true;
-            //save the index of the product in the index variable 
+            // save the index of the product in the index variable 
             index = i;
         }
     }
 
-    // if the condition holds true, then exists is true, the index of our lineItem gets assigned i
+    // if the condition holds true, then exists is true, the index of our lineItem gets assigned [i]
     // if exists is true, then we increase by 1 the quantity of our lineItem
     // else we make a new lineItem and we store in the cart 
 
@@ -91,17 +91,17 @@ function addProduct(product) {
     renderShoppingCart();
 }
 
-//We create this function, similar to the one above, except this one will give user the alert "Product Added!" only when 
-//pressing add to cart button either in the product catalogue page, or on the detailed product information page. 
-//We wanted to have an alert so that the user can have some sort of feedback when his/hers product has been added to the cart 
+// We create this function, similar to the one above, except this one will give user the alert "Product Added!" only when 
+// pressing add to cart button either in the product catalogue page, or on the detailed product information page. 
+// We wanted to have an alert so that the user can have some sort of feedback when his/hers product has been added to the cart 
 
 function addProductWithAlert(product) {
     addToCart(product);
     alert("Product Added!");
 }
 
-//Function to remove product one by one, calling function removeAll if the quantity of that particular product has reached 0
-//We do so in order to avoid negative quantities 
+// Function to remove product one by one, calling function removeAll if the quantity of that particular product has reached 0
+// We do so in order to avoid negative quantities 
 
 function removeProduct(product) {
     let itemID = product.dataset.id
@@ -121,7 +121,7 @@ function removeProduct(product) {
     renderShoppingCart();
 }
 
-//We have created a function that permits us to remove all the beers of the same type 
+// We have created a function that permits us to remove all the beers of the same type 
 function removeAll(product) {
     let itemID = product.dataset.id
     for (let i = 0; i < shoppingCart.length; i++) {
@@ -133,7 +133,7 @@ function removeAll(product) {
     }
 }
 
-//We have made a function to calculate the total amount of the products in our shopping cart, taking VAT into consideration
+// We have made a function to calculate the total amount of the products in our shopping cart, taking VAT into consideration
 function totalAmount() {
     let total = 0;
     let VAT = 1.25;
@@ -143,7 +143,7 @@ function totalAmount() {
     return total * VAT;
 }
 
-//We declare a function that is supposed to verify whether the name text field contains letters 
+// We declare a function that is supposed to verify whether the name text field contains letters 
 function validateName(name) {
     var nameCheck = /^[A-Za-z]+ [A-Za-z ]+$/;
     return nameCheck.test(String(name));
@@ -151,11 +151,11 @@ function validateName(name) {
 
 // We render the shoppingCart only when on the cart.html page
 if (location.href.includes('cart.html')) {
-    //If the button with the id "continue-btn" has been clicked, the function will be called
+    // If the button with the id "continue-btn" has been clicked, the function will be called
     document.getElementById("continue-btn").onclick = function () {
         console.log("button clicked")
 
-        //we assign the value inputted in the elements with their particular id to these specific variables ? 
+        // we assign the value inputted in the elements with their particular id to these specific variables ? 
         let cardholderName = document.getElementById("cardholderName").value
         let creditcardNumber = document.getElementById("creditCardNumber").value
         let expiryDate = document.getElementById("expiryDate").value
@@ -168,6 +168,7 @@ if (location.href.includes('cart.html')) {
         //     alert("You need to enter your First and Last name!")
         //     return false
         // }
+
         if (localStorage.getItem("loggedInUser") !== cardholderName) {
             alert("Please log in to complete your purchase")
             return false

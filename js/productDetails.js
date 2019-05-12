@@ -11,5 +11,5 @@ const product = findProduct(parseInt(productID, 10));
 
 // We create the html code for the product details to be shown to the user
 document.getElementById('details').innerHTML = product.productDetails();
-// We the get the div with the id 'details', assigning the productDetails to its innertHTML 
+// We the get the div with the id 'details', assigning the productDetails to its innertHTML
 

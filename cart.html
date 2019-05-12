@@ -5,40 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="./styles/stylingsheet.css"> 
-    
+    <link rel="stylesheet" type="text/css" href="./styles/stylingsheet.css">
+
     <title> Shopping Cart </title>
-    
+
 </head>
 
 <body>
-        <div class="menu">
-                <ul id="navbar"> 
-                     <li><a href="frontpage.html" class="button">Home</a></li>
-                    <li><a href="aboutus.html" class="button">About us</a></li>
-                    <li><a href="product.html" class="button">Beer catalogue</a></li>
-                    <li class="dropdown">
-                            <a href="javascript:void(0)"
-                    class="dropdownbtn"> Are you a member? </a>
-                        <div class = "dropcontent">
-                   <a href="login.html" class="button">Sign in</a>
-                   <a href="registration.html" class="button">Register</a>
-                        </div>
-                        </li>
-                        <li style="float:right"><a href="cart.html" class="button">Shopping Cart</a></li>
-                        </ul>
+    <div class="menu">
+        <ul id="navbar">
+            <li><a href="frontpage.html" class="button">Home</a></li>
+            <li><a href="aboutus.html" class="button">About us</a></li>
+            <li><a href="product.html" class="button">Beer catalogue</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropdownbtn"> Are you a member? </a>
+                <div class="dropcontent">
+                    <a href="login.html" class="button">Sign in</a>
+                    <a href="registration.html" class="button">Register</a>
+                </div>
+            </li>
+            <li style="float:right"><a href="cart.html" class="button">Shopping Cart</a></li>
+        </ul>
 
-</div>
+    </div>
     <h1> Shopping Cart</h1>
     <div>
         <table>
             <thead>
-                    <tr> 
+                <tr>
                     <th> Name: </th>
                     <th> Price: </th>
                     <th> Quantity: </th>
-                    </tr>
-            
+                </tr>
+
             </thead>
             <tbody id="cart-content">
             </tbody>
@@ -55,20 +54,20 @@
     <input type="radio" disabled> <label> PayPal (coming soon) </label>
 
 
-    
-    <div>
-        <form> 
-        <input id="cardholderName" type="text" placeholder="Cardholder name" name="cardholderName">
-        <input id="creditCardNumber" type="text" placeholder="Credit card number" name="ccn">
-        <input id="expiryDate" type="date" placeholder="Expiry date" name="exdate">
-        <input id="ccv" type="text" placeholder="CCV" name="ccv">
 
-        <button id="continue-btn"> Payment </button>
+    <div>
+        <form>
+            <input id="cardholderName" type="text" placeholder="Cardholder name" name="cardholderName">
+            <input id="creditCardNumber" type="text" placeholder="Credit card number" name="ccn">
+            <input id="expiryDate" type="date" placeholder="Expiry date" name="exdate">
+            <input id="ccv" type="text" placeholder="CCV" name="ccv">
+
+            <button id="continue-btn"> Payment </button>
         </form>
     </div>
 
-    <button id="back-btn" onclick="location.href='product.html'">Go back to shop</button> 
-    
+    <button id="back-btn" onclick="location.href='product.html'">Go back to shop</button>
+
 
     <script src="./js/product.js"></script>
     <script src="./js/productDB.js"></script>
