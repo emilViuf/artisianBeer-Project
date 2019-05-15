@@ -1,3 +1,4 @@
+
 let users = getSavedUsers()
 
 const fullNameUI = document.getElementById("fullName")
@@ -76,7 +77,17 @@ submitUI.onclick = function () {
     users.push(new User(fullNameUI.value, dobUI.value,
         emailUI.value, phoneUI.value, streetUI.value, numberUI.value,
         zipUI.value, cityUI.value, usernameUI.value, passwordUI.value));
+<<<<<<< HEAD
     saveUsers(users);
     location.assign('login.html');
     // Save the user to local storage
+=======
+
+
+    saveUsers(users)
+
+    location.assign('login.html')
+
+    // Save the user to localStorage
+>>>>>>> d2ceedf09954562189b29728d1e4df139cf922eb
 }

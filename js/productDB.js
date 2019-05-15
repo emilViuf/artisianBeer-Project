@@ -1,3 +1,4 @@
+
 //  Here we create the array containing our product objects and assign it to a constant called products 
 
 const products = [new Product(1, "Funky Town", "Pale Ale", "Medium amber", "Light malt flavour, with tropical and floral qualities. Dry and bitter aftertaste.", 50, "330 ml.", "images/paleale.png"),

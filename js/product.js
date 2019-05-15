@@ -1,3 +1,4 @@
+
 // We create a Product class with properties (productID, name, ...)
 // The way we give value to Product properties is through the parameters of the constructor
 // The values of the parameters get assigned to the properties of the product

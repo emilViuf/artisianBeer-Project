@@ -1,3 +1,4 @@
+
 // We store the shoppingCart in the shoppingCart variable
 var shoppingCart = getShoppingCart();
 
@@ -82,7 +83,7 @@ function renderLineItem(item) {
         "</tr>";
 }
 
-// Here we delcare a function which adds a product to the cart
+// Here we declare a function which adds a product to the cart
 // And renders the shoppingCart
 // We created this function to be able to add to shoppingCart from the cart page and also refresh the page
 
