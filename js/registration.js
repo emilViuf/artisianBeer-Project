@@ -1,3 +1,4 @@
+
 let users = getSavedUsers()
 
 // Create a binding for each UI (user interface) element on the html panel
@@ -83,19 +84,6 @@ submitUI.onclick = function () {
         return false
     }
 
-
-
-    // not needed since we have it per default
-    // var cityCheck = /^[A-Za-z ]+$/;
-    // if (!cityCheck.test(String(cityUI.value))) {
-    //     alert("You have entered an invalid city name");
-    //     return false;
-    // }
-
-
-
-
-
     // Create a new user from data and add him to the array of users
 
     users.push(new User(fullNameUI.value, dobUI.value,
@@ -107,5 +95,5 @@ submitUI.onclick = function () {
 
     location.assign('login.html')
 
-    // Save the user to local storage
+    // Save the user to localStorage
 }

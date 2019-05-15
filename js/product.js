@@ -1,3 +1,4 @@
+
 // We create a Product class with properties (productID, name, ...)
 // The way we give value to Product properties is through the parameters of the constructor
 // The values of the parameters get assigned to the properties of the product
@@ -14,7 +15,7 @@ class Product {
     this.img = img;
   }
 
-  // THis function creates the html for the product page for the specific product 
+  // This function creates the html for the product page for the specific product 
   productInformation() {
     return "<div style=\"margin-bottom: 75px\" class=\"product\">" +
       "<img src=\"" + this.img + "\" height=\"300\" width=\"250\" >" +
