@@ -60,7 +60,7 @@ function renderShoppingCart() {
     var cartInformation = "";
     for (i = 0; i < shoppingCart.length; i++) {
         cartInformation += renderLineItem(shoppingCart[i])
-    }.
+    }
     document.getElementById("cart-content").innerHTML = cartInformation;
     document.getElementById("totalPrice").innerHTML = "Your total price is " + totalAmount() + " DKK."
 }
