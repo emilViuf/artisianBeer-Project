@@ -59,7 +59,7 @@ function renderShoppingCart() {
     var cartInformation = "";
     for (i = 0; i < shoppingCart.length; i++) {
         cartInformation += renderLineItem(shoppingCart[i])
-    }
+    }.
     document.getElementById("cart-content").innerHTML = cartInformation;
     document.getElementById("totalPrice").innerHTML = "Your total price is " + totalAmount() + " DKK."
 }
@@ -142,13 +142,6 @@ function totalAmount() {
     }
     return total * VAT;
 }
-
-// We declare a function that is supposed to verify whether the name text field contains letters 
-function validateName(name) {
-    var nameCheck = /^[A-Za-z]+ [A-Za-z ]+$/;
-    return nameCheck.test(String(name));
-}
-
 // We render the shoppingCart only when on the cart.html page
 if (location.href.includes('cart.html')) {
     // If the button with the id "continue-btn" has been clicked, the function will be called
@@ -163,11 +156,6 @@ if (location.href.includes('cart.html')) {
 
         // We access the DOM elements by id, to verify the values (the information) inputted 
         // If the information is invalid, the function will return false and give an alert 
-
-        // if (!validateName(cardholderName)) {
-        //     alert("You need to enter your First and Last name!")
-        //     return false
-        // }
 
         if (localStorage.getItem("loggedInUser") !== cardholderName) {
             alert("Please log in to complete your purchase")

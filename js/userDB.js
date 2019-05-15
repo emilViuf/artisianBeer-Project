@@ -3,7 +3,6 @@
 
 function getSavedUsers() {
   let users;
-
   // we check if there are any users in localStorage 
   // If there aren't any, we create a new default user, Tatiana
 

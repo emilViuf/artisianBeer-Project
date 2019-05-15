@@ -15,13 +15,11 @@ document.getElementById('showProducts').innerHTML = html
 function search() {
     var input = document.getElementById("search").value.toLowerCase();
     var divs = document.getElementsByClassName("product");
-
     // We loop through all the divs, and the ones that match our input field we set them to display block 
     for (i = 0; i < divs.length; i++) {
         if (divs[i].innerText.toLowerCase().includes(input)) {
             divs[i].style.display = "block";
         }
-
         // otherwise it sets our input field to display none 
         else {
             divs[i].style.display = "none";

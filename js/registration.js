@@ -1,7 +1,5 @@
 let users = getSavedUsers()
 
-// Create a binding for each UI (user interface) element on the html panel
-
 const fullNameUI = document.getElementById("fullName")
 const dobUI = document.getElementById("dob")
 const emailUI = document.getElementById("email")
@@ -15,14 +13,8 @@ const passwordUI = document.getElementById("password")
 const checkboxUI = document.getElementById("checkbox")
 const submitUI = document.getElementById("submit-button")
 
-// Now we have linked them all up
-// Add functionality to the click button
-// Create a function that responds to a click on the submit button
-// Checks if all fields are set, if not, it returns false
-
 submitUI.onclick = function () {
     console.log("button was clicked")
-
     if (fullNameUI.value.length == 0 || dobUI.value.length == 0 || emailUI.value.length == 0
         || phoneUI.value.length == 0 || streetUI.value.length == 0
         || numberUI.value.lengh == 0 || zipUI.value.lengh == 0
@@ -34,18 +26,16 @@ submitUI.onclick = function () {
     }
 
     // We need to implement type of evaluation of the provided data
-
     // 1. Evaluate name and date of birth
 
     var nameCheck = /^[A-Za-z- " "]+$/;
     if (!nameCheck.test(String(fullNameUI.value))) {
-        alert("You have entered an invalid full name");
+        alert("You have entered an invalid full name!");
         return false;
     }
 
-
     if (dobUI.value.length === 0) {
-        alert("Please enter a valid date of birth")
+        alert("Please enter a valid date of birth!")
         return false;
     }
 
@@ -55,7 +45,6 @@ submitUI.onclick = function () {
         var emailUIcheck = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
         return emailUIcheck.test(String(email).toLowerCase());
     }
-
     if (!validateEmail(emailUI.value)) {
         alert("You have entered an invalid email address!")
         return false
@@ -64,14 +53,13 @@ submitUI.onclick = function () {
     // 3. Evaluate if phone number fits criteria of 8 digits
 
     if (phoneUI.value.length !== 8) {
-        alert("Phone number is invalid")
+        alert("Phone number is invalid!")
         return false
     }
 
-
     var streetCheck = /^[A-Za-z ]+$/;
     if (!streetCheck.test(String(streetUI.value))) {
-        alert("You have entered an invalid street name");
+        alert("You have entered an invalid street name!");
         return false;
     }
 
@@ -83,29 +71,12 @@ submitUI.onclick = function () {
         return false
     }
 
-
-
-    // not needed since we have it per default
-    // var cityCheck = /^[A-Za-z ]+$/;
-    // if (!cityCheck.test(String(cityUI.value))) {
-    //     alert("You have entered an invalid city name");
-    //     return false;
-    // }
-
-
-
-
-
     // Create a new user from data and add him to the array of users
 
     users.push(new User(fullNameUI.value, dobUI.value,
         emailUI.value, phoneUI.value, streetUI.value, numberUI.value,
         zipUI.value, cityUI.value, usernameUI.value, passwordUI.value));
-
-
-    saveUsers(users)
-
-    location.assign('login.html')
-
+    saveUsers(users);
+    location.assign('login.html');
     // Save the user to local storage
 }
